@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7 Mistérios da Bíblia que Poucos Conseguem Explicar</title>
+  <meta name="description" content="Ebook bíblico sobre Apocalipse, marca da besta, anticristo, anjos caídos, vida após a morte e os sinais da volta de Jesus." />
+  <style>
+    :root {
+      --bg: #0f0c0a;
+      --panel: #17120f;
+      --panel-2: #211810;
+      --text: #f3eadc;
+      --muted: #d3c1a8;
+      --gold: #c89a44;
+      --gold-2: #f0c977;
+      --line: rgba(240, 201, 119, 0.16);
+      --shadow: 0 18px 60px rgba(0, 0, 0, 0.35);
+      --radius: 24px;
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(200, 154, 68, 0.14), transparent 28%),
+        linear-gradient(180deg, #120e0b 0%, #0d0b09 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.03);
+      color: var(--gold-2);
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-size: 14px;
+      letter-spacing: 0.02em;
+      backdrop-filter: blur(10px);
+    }
+
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 16px 24px;
+      border-radius: 16px;
+      font-weight: 700;
+      transition: transform 0.18s ease, opacity 0.18s ease, box-shadow 0.18s ease;
+      box-shadow: var(--shadow);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.96;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gold-2), var(--gold));
+      color: #251809;
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.03);
+      color: var(--text);
+    }
+
+    .hero {
+      padding: 72px 0 38px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    h1, h2, h3 { margin: 0 0 16px; line-height: 1.1; }
+    h1 { font-size: clamp(2.2rem, 5vw, 4.5rem); letter-spacing: -0.03em; }
+    h2 { font-size: clamp(1.6rem, 2.5vw, 2.4rem); }
+    h3 { font-size: 1.15rem; }
+
+    .sub {
+      font-size: clamp(1.02rem, 1.7vw, 1.25rem);
+      color: var(--muted);
+      max-width: 760px;
+    }
+
+    .hero-points {
+      margin-top: 22px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .point {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      color: var(--muted);
+    }
+
+    .point strong { color: var(--text); }
+
+    .cover-card {
+      position: relative;
+      background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .cover-card::before {
+      content: "";
+      position: absolute;
+      inset: -20% auto auto -20%;
+      width: 220px;
+      height: 220px;
+      background: radial-gradient(circle, rgba(240,201,119,0.14), transparent 60%);
+      pointer-events: none;
+    }
+
+    .cover {
+      width: 100%;
+      aspect-ratio: 4 / 5.2;
+      object-fit: cover;
+      border-radius: 18px;
+      background: #2a2018;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .section {
+      padding: 34px 0;
+    }
+
+    .panel {
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 22px;
+    }
+
+    .card p, .panel p, .faq p, li {
+      color: var(--muted);
+    }
+
+    ul.clean {
+      list-style: none;
+      padding: 0;
+      margin: 16px 0 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    ul.clean li {
+      position: relative;
+      padding-left: 28px;
+    }
+
+    ul.clean li::before {
+      content: "✦";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--gold-2);
+    }
+
+    .chapters {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .chapter {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px;
+    }
+
+    .faq-wrap {
+      display: grid;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .faq {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px;
+      background: rgba(255,255,255,0.02);
+    }
+
+    .cta-panel {
+      text-align: center;
+      padding: 38px 24px;
+      background:
+        radial-gradient(circle at top, rgba(240,201,119,0.14), transparent 40%),
+        linear-gradient(180deg, #1b140f 0%, #130f0c 100%);
+    }
+
+    .footer {
+      padding: 28px 0 54px;
+      color: #b89e78;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .price {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 10px;
+      margin: 8px 0 12px;
+    }
+
+    .price strong {
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--gold-2);
+      line-height: 1;
+    }
+
+    .small {
+      color: #c9b18d;
+      font-size: 14px;
+    }
+
+    @media (max-width: 920px) {
+      .hero-grid,
+      .grid-3,
+      .chapters {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 44px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!--
+    EDITE APENAS ESTES CAMPOS PARA PERSONALIZAR RAPIDAMENTE:
+    1) HOTMART_LINK
+    2) BOOK_COVER
+    3) PAGE_LANG
+    4) texts dentro de CONTENT
+  -->
+  <script>
+    const HOTMART_LINK = "https://pay.hotmart.com/Y105319298G";
+    const BOOK_COVER = "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=900&q=80";
+    const PAGE_LANG = "pt-BR"; // troque para "es-ES" se quiser
+
+    const CONTENT = {
+      "pt-BR": {
+        pageTitle: "7 Mistérios da Bíblia que Poucos Conseguem Explicar",
+        metaDescription: "Um ebook bíblico para quem deseja compreender temas que despertam curiosidade, reflexão e discernimento espiritual.",
+        badge: "Ebook digital • Acesso imediato",
+        heroTitle: "7 Mistérios da Bíblia que Poucos Conseguem Explicar",
+        heroSubtitle: "Descubra temas bíblicos que despertam curiosidade, reflexão e perguntas profundas em um material claro, organizado e direto ao ponto.",
+        ctaPrimary: "Quero acessar o ebook",
+        ctaSecondary: "Ver o que você vai encontrar",
+        point1Title: "Leitura simples",
+        point1Text: "Conteúdo acessível para quem deseja estudar sem linguagem complicada.",
+        point2Title: "Temas de alto interesse",
+        point2Text: "Apocalipse, marca da besta, anticristo, anjos caídos, vida após a morte e mais.",
+        point3Title: "Ideal para estudo pessoal",
+        point3Text: "Um material pensado para leitura individual, reflexão e aprofundamento bíblico.",
+        benefitsTitle: "Por que este ebook pode ser para você",
+        benefitA: "Quer entender melhor temas bíblicos que sempre geram dúvidas.",
+        benefitB: "Busca um material direto, bem organizado e fácil de acompanhar.",
+        benefitC: "Deseja aprofundar sua fé com mais clareza e reverência.",
+        benefitD: "Procura um conteúdo que você possa ler no seu ritmo.",
+        chapterTitle: "O que você vai encontrar",
+        chapter1: "Quem foram os Nefilins",
+        chapter2: "O que é a marca da besta",
+        chapter3: "Quem é o anticristo",
+        chapter4: "O que acontece depois da morte",
+        chapter5: "O tema dos anjos caídos",
+        chapter6: "O verdadeiro significado do Apocalipse",
+        chapter7: "Os sinais da volta de Jesus",
+        forWhoTitle: "Para quem é este material",
+        forWhoText: "Para cristãos, curiosos das Escrituras e pessoas que desejam compreender melhor temas bíblicos que despertam perguntas profundas.",
+        faqTitle: "Perguntas frequentes",
+        faq1Q: "Como recebo o ebook?",
+        faq1A: "Após a compra, o acesso é liberado no ambiente da plataforma utilizada na venda.",
+        faq2Q: "O material é digital?",
+        faq2A: "Sim. Este é um ebook digital, pensado para acesso rápido e leitura em celular, tablet ou computador.",
+        faq3Q: "É indicado para estudo pessoal?",
+        faq3A: "Sim. O conteúdo foi organizado para leitura individual, reflexão e aprofundamento.",
+        finalTitle: "Aprofunde seu entendimento bíblico com mais clareza",
+        finalText: "Clique no botão abaixo e acesse agora o seu ebook.",
+        priceLabel: "Oferta atual",
+        priceValue: "R$ 24,90",
+        footer: "Página independente criada para divulgação do ebook."
+      },
+      "es-ES": {
+        pageTitle: "7 Misterios de la Biblia que Pocos Pueden Explicar",
+        metaDescription: "Un ebook bíblico para personas que desean comprender temas que despiertan curiosidad, reflexión y discernimiento espiritual.",
+        badge: "Ebook digital • Acceso inmediato",
+        heroTitle: "7 Misterios de la Biblia que Pocos Pueden Explicar",
+        heroSubtitle: "Descubre temas bíblicos que despiertan curiosidad, reflexión y preguntas profundas en un material claro, organizado y directo.",
+        ctaPrimary: "Quiero acceder al ebook",
+        ctaSecondary: "Ver lo que encontrarás",
+        point1Title: "Lectura sencilla",
+        point1Text: "Contenido accesible para quien desea estudiar sin lenguaje complicado.",
+        point2Title: "Temas de gran interés",
+        point2Text: "Apocalipsis, marca de la bestia, anticristo, ángeles caídos, vida después de la muerte y más.",
+        point3Title: "Ideal para estudio personal",
+        point3Text: "Un material pensado para lectura individual, reflexión y profundización bíblica.",
+        benefitsTitle: "Por qué este ebook puede ser para ti",
+        benefitA: "Quieres entender mejor temas bíblicos que siempre generan preguntas.",
+        benefitB: "Buscas un material directo, bien organizado y fácil de seguir.",
+        benefitC: "Deseas profundizar tu fe con más claridad y reverencia.",
+        benefitD: "Prefieres un contenido que puedas leer a tu ritmo.",
+        chapterTitle: "Lo que encontrarás",
+        chapter1: "Quiénes fueron los Nefilim",
+        chapter2: "Qué es la marca de la bestia",
+        chapter3: "Quién es el anticristo",
+        chapter4: "Qué sucede después de la muerte",
+        chapter5: "El tema de los ángeles caídos",
+        chapter6: "El verdadero significado del Apocalipsis",
+        chapter7: "Las señales del regreso de Jesús",
+        forWhoTitle: "Para quién es este material",
+        forWhoText: "Para cristianos, personas interesadas en las Escrituras y lectores que desean comprender mejor temas bíblicos que despiertan preguntas profundas.",
+        faqTitle: "Preguntas frecuentes",
+        faq1Q: "¿Cómo recibo el ebook?",
+        faq1A: "Después de la compra, el acceso se libera en el entorno de la plataforma utilizada para la venta.",
+        faq2Q: "¿El material es digital?",
+        faq2A: "Sí. Es un ebook digital pensado para acceso rápido y lectura desde móvil, tablet u ordenador.",
+        faq3Q: "¿Sirve para estudio personal?",
+        faq3A: "Sí. El contenido fue organizado para lectura individual, reflexión y profundización.",
+        finalTitle: "Profundiza tu comprensión bíblica con más claridad",
+        finalText: "Haz clic en el botón de abajo y accede ahora a tu ebook.",
+        priceLabel: "Oferta actual",
+        priceValue: "€4,99",
+        footer: "Página independiente creada para divulgar el ebook."
+      }
+    };
+  </script>
+
+  <div class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="badge" id="badge"></div>
+        <h1 id="heroTitle"></h1>
+        <p class="sub" id="heroSubtitle"></p>
+        <div class="hero-points">
+          <div class="point"><span>✦</span><div><strong id="p1t"></strong> <span id="p1d"></span></div></div>
+          <div class="point"><span>✦</span><div><strong id="p2t"></strong> <span id="p2d"></span></div></div>
+          <div class="point"><span>✦</span><div><strong id="p3t"></strong> <span id="p3d"></span></div></div>
+        </div>
+        <div class="btn-row">
+          <a class="btn btn-primary" id="cta1" href="#" target="_blank" rel="noopener noreferrer"></a>
+          <a class="btn btn-secondary" href="#conteudo" id="cta2"></a>
+        </div>
+      </div>
+
+      <div class="cover-card">
+        <img class="cover" id="bookCover" alt="Capa do ebook" />
+      </div>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container grid-3">
+      <div class="card">
+        <h3 id="benefitsTitle"></h3>
+        <ul class="clean">
+          <li id="benefitA"></li>
+          <li id="benefitB"></li>
+          <li id="benefitC"></li>
+          <li id="benefitD"></li>
+        </ul>
+      </div>
+
+      <div class="card" id="conteudo">
+        <h3 id="chapterTitle"></h3>
+        <div class="chapters">
+          <div class="chapter" id="chapter1"></div>
+          <div class="chapter" id="chapter2"></div>
+          <div class="chapter" id="chapter3"></div>
+          <div class="chapter" id="chapter4"></div>
+          <div class="chapter" id="chapter5"></div>
+          <div class="chapter" id="chapter6"></div>
+          <div class="chapter" id="chapter7"></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 id="forWhoTitle"></h3>
+        <p id="forWhoText"></p>
+        <div class="price">
+          <span class="small" id="priceLabel"></span>
+          <strong id="priceValue"></strong>
+        </div>
+        <a class="btn btn-primary" id="cta3" href="#" target="_blank" rel="noopener noreferrer"></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container panel">
+      <h2 id="faqTitle"></h2>
+      <div class="faq-wrap">
+        <div class="faq">
+          <h3 id="faq1Q"></h3>
+          <p id="faq1A"></p>
+        </div>
+        <div class="faq">
+          <h3 id="faq2Q"></h3>
+          <p id="faq2A"></p>
+        </div>
+        <div class="faq">
+          <h3 id="faq3Q"></h3>
+          <p id="faq3A"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container panel cta-panel">
+      <h2 id="finalTitle"></h2>
+      <p class="sub" id="finalText" style="margin: 0 auto;"></p>
+      <div class="btn-row" style="justify-content: center;">
+        <a class="btn btn-primary" id="cta4" href="#" target="_blank" rel="noopener noreferrer"></a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container" id="footer"></div>
+  </footer>
+
+  <script>
+    const t = CONTENT[PAGE_LANG] || CONTENT["pt-BR"];
+    document.documentElement.lang = PAGE_LANG;
+    document.title = t.pageTitle;
+    document.querySelector('meta[name="description"]').setAttribute('content', t.metaDescription);
+
+    const map = {
+      badge: t.badge,
+      heroTitle: t.heroTitle,
+      heroSubtitle: t.heroSubtitle,
+      p1t: t.point1Title,
+      p1d: t.point1Text,
+      p2t: t.point2Title,
+      p2d: t.point2Text,
+      p3t: t.point3Title,
+      p3d: t.point3Text,
+      cta1: t.ctaPrimary,
+      cta2: t.ctaSecondary,
+      benefitsTitle: t.benefitsTitle,
+      benefitA: t.benefitA,
+      benefitB: t.benefitB,
+      benefitC: t.benefitC,
+      benefitD: t.benefitD,
+      chapterTitle: t.chapterTitle,
+      chapter1: t.chapter1,
+      chapter2: t.chapter2,
+      chapter3: t.chapter3,
+      chapter4: t.chapter4,
+      chapter5: t.chapter5,
+      chapter6: t.chapter6,
+      chapter7: t.chapter7,
+      forWhoTitle: t.forWhoTitle,
+      forWhoText: t.forWhoText,
+      priceLabel: t.priceLabel,
+      priceValue: t.priceValue,
+      cta3: t.ctaPrimary,
+      faqTitle: t.faqTitle,
+      faq1Q: t.faq1Q,
+      faq1A: t.faq1A,
+      faq2Q: t.faq2Q,
+      faq2A: t.faq2A,
+      faq3Q: t.faq3Q,
+      faq3A: t.faq3A,
+      finalTitle: t.finalTitle,
+      finalText: t.finalText,
+      cta4: t.ctaPrimary,
+      footer: t.footer
+    };
+
+    Object.entries(map).forEach(([id, value]) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      if (el.tagName === "A") {
+        el.textContent = value;
+      } else {
+        el.textContent = value;
+      }
+    });
+
+    ["cta1", "cta3", "cta4"].forEach(id => {
+      const link = document.getElementById(id);
+      link.href = HOTMART_LINK;
+    });
+
+    const bookCover = document.getElementById("bookCover");
+    bookCover.src = BOOK_COVER;
+    bookCover.alt = t.pageTitle;
+  </script>
+</body>
+</html>
